@@ -34,7 +34,7 @@ function Form() {
         else { type = "accomplishments" }
 
 
-        fetch(`http://localhost:8000/${type}`, {
+        fetch(`http://localhost:3000/${type}`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
