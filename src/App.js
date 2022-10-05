@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-import NavBar from "./components/NavBar";
+import NavBar from "./Components/Navbar";
 import Goals from "./components/Goals";
 import Accomplishments from "./components/Accomplishments";
-import Home from "./components/Home";
+import Home from "./Components/Home";
 import Form from "./components/Form";
 
 
@@ -59,7 +59,19 @@ function App() {
   }
   return (
     <div>
-      <h1>hello world problem</h1>
+      <NavBar />
+      <Form onFormSubmit={onFormSubmit}/>
+      <Routes>
+      <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/goals">
+          <Goals goals={goals} onUpdateGoal={onUpdateGoal} onDeleteClick={onDeleteClick}/>
+        </Route>
+        <Route path="/accomplishments">
+          <Accomplishments accomplishments={accomplishments} onDeleteClick={onDeleteClick}/>
+        </Route>
+      </Routes>
     </div>
   );
 }
