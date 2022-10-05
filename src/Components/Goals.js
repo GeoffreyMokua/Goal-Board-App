@@ -1,7 +1,18 @@
 import React from 'react';
 import GoalItem from "./GoalItem"
 
-function Goals() {
+function Goals({ goals, onUpdateGoal, onDeleteClick }) {
+
+    const renderGoals = goals.map(goal => {
+        return(
+            <GoalItem 
+                key={goal.id} 
+                goal={goal} 
+                onUpdateGoal={onUpdateGoal}
+                onDeleteClick={onDeleteClick}
+                />
+        )
+    })
     
 
     return (
