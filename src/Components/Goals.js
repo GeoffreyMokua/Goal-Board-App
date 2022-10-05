@@ -16,8 +16,9 @@ function Goals({ goals, onUpdateGoal, onDeleteClick }) {
     
 
     return (
-        
-
-    )
+        <div id="goals-container">
+            {renderGoals}
+        </div>
+           );
 }
 export default Goals;
