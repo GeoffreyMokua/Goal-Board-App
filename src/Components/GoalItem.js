@@ -1,13 +1,13 @@
 import React,  {useState} from 'react';
 
 
-function GoalItem() {
+function GoalItem({ goal, onUpdateGoal, onDeleteClick }) {
      const {id, name, progress} = goal;
     const [progressBar, setProgressBar] = useState(progress);
      
     const handleChange = (e) => {
         setProgressBar(parseInt(e.target.value))
-        fetch(`http://localhost:8000/goals/${id}`, {
+        fetch(`http://localhost:3000/goals/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
