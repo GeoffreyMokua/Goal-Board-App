@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function AccomplishmentItem() {
+function AccomplishmentItem({accomplishment, onDeleteClick}) {
     const { id, name, completed } = accomplishment;
 
     const handleDelete = () => {
