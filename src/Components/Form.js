@@ -26,6 +26,31 @@ function Form() {
             })
         };
     };
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        let type;
+        if (formType) { type = "goals" }
+        else { type = "accomplishments" }
+
+
+        fetch(`http://localhost:8000/${type}`, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(formType ? goalData : accomplishmentData)
+            })
+                .then(res => res.json())
+                .then(newData => onFormSubmit(newData, type))
+
+        formType ? 
+        setGoalData({name: "", progress: ""}) : 
+        setAccomplishmentData({name: "", completed: ""})
+        
+        
+    }
     
 
 
