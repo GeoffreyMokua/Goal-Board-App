@@ -13,6 +13,19 @@ function Form() {
     const handleFormTypeChange = () => {
         setFormType(!formType);
     }
+    const handleChange = (e) => {
+        if (formType) {
+            setGoalData({
+                ...goalData,
+                [e.target.name]: e.target.value,
+            })
+        } else {
+            setAccomplishmentData({
+                ...accomplishmmentData,
+                [e.target.name]: e.target.value,
+            })
+        };
+    };
     
 
 
