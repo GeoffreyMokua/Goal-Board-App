@@ -6,6 +6,13 @@ function Form() {
         name: "",
         progess: ""
     })
+    const [accomplishmmentData, setAccomplishmentData] = useState({
+        name: "",
+        completed: ""
+    })
+    const handleFormTypeChange = () => {
+        setFormType(!formType);
+    }
     
 
 
