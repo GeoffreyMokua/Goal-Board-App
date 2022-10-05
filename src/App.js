@@ -24,6 +24,18 @@ function App() {
       .then(res => res.json())
       .then(setAccomplishments);
   }, []);
+
+
+  const onUpdateGoal = (updatedGoal) => {
+    const updatedGoals = goals.map(originalGoal => {
+      if(originalGoal.id === updatedGoal.id){
+        return updatedGoal;
+      } else{
+        return originalGoal;
+      }
+    });
+    console.log(updatedGoals);
+  }
   return (
     <div>
       <h1>hello world problem</h1>
