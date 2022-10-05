@@ -11,7 +11,13 @@ import Form from "./components/Form";
 function App() {
   const [goals, setGoals] = useState([]);
   const [accomplishments, setAccomplishments] = useState([]);
-  
+
+
+   useEffect(() => {
+    fetch(`http://localhost:3000/goals`)
+      .then(res => res.json())
+      .then(setGoals);
+  }, []);
   return (
     <div>
       <h1>hello world problem</h1>
