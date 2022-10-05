@@ -17,6 +17,12 @@ function App() {
     fetch(`http://localhost:3000/goals`)
       .then(res => res.json())
       .then(setGoals);
+   }, []);
+  
+  useEffect(() => {
+    fetch(`http://localhost:3000/accomplishments`)
+      .then(res => res.json())
+      .then(setAccomplishments);
   }, []);
   return (
     <div>
