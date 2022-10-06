@@ -21,3 +21,30 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+ <div>
+      <NavBar />
+      <Form onFormSubmit={onFormSubmit}/>
+      <Routes>
+      <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/goals">
+          <Goals goals={goals} onUpdateGoal={onUpdateGoal} onDeleteClick={onDeleteClick}/>
+        </Route>
+        <Route path="/accomplishments">
+          <Accomplishments accomplishments={accomplishments} onDeleteClick={onDeleteClick}/>
+        </Route>
+      </Routes>
+    </div>
+
+
+
+     <div>
+      <NavBar /> 
+      <Form onFormSubmit={onFormSubmit} />
+          <Home />
+          <Goals goals={goals} onUpdateGoal={onUpdateGoal} onDeleteClick={onDeleteClick}/>
+        <Accomplishments accomplishments={accomplishments} onDeleteClick={onDeleteClick} /> 
+      
+    </div>

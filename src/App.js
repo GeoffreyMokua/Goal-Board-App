@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Routes } from "react-router-dom";
+import {  Route, Routes } from "react-router-dom";
 
-import NavBar from "./Components/Navbar";
-import Goals from "./components/Goals";
-import Accomplishments from "./components/Accomplishments";
-import Home from "./Components/Home";
-import Form from "./components/Form";
 
+import NavBar from './Components/Navbar';
+import Form from './Components/Form';
+import Goals from './Components/Goals';
+import Accomplishments from './Components/Accomplishments';
+import Home from './Components/Home';
 
 function App() {
   const [goals, setGoals] = useState([]);
@@ -57,22 +57,24 @@ function App() {
         }))
       }
   }
-  return (
-    <div>
+  return ( 
+      <div>
       <NavBar />
       <Form onFormSubmit={onFormSubmit}/>
       <Routes>
-      <Route exact path="/">
-          <Home />
+      <Route exact path="/" element={<Home />}>
+          
         </Route>
-        <Route path="/goals">
-          <Goals goals={goals} onUpdateGoal={onUpdateGoal} onDeleteClick={onDeleteClick}/>
+        <Route path="/goals" element={<Goals goals={goals} onUpdateGoal={onUpdateGoal} onDeleteClick={onDeleteClick}/>}>
+          
         </Route>
-        <Route path="/accomplishments">
-          <Accomplishments accomplishments={accomplishments} onDeleteClick={onDeleteClick}/>
+        <Route path="/accomplishments" element={<Accomplishments accomplishments={accomplishments} onDeleteClick={onDeleteClick}/>}>
+          
         </Route>
-      </Routes>
+        </Routes>
+      
     </div>
+    
   );
 }
 

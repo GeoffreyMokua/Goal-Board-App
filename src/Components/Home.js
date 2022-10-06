@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Home() {
+ function Home() {
     return(
         <div id="home-container">
             <h3>Moringa School Phase 2 Project</h3>
@@ -11,8 +11,5 @@ function Home() {
             
         </div>
     );
-
-
-
 }
 export default Home;

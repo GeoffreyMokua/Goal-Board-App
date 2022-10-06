@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 
-function Form() {
+function Form({onFormSubmit}) {
     const [formType, setFormType] = useState(true);
     const [goalData, setGoalData] = useState({
         name: "",
         progess: ""
     })
-    const [accomplishmmentData, setAccomplishmentData] = useState({
+    const [accomplishmentData, setAccomplishmentData] = useState({
         name: "",
         completed: ""
     })
@@ -21,7 +21,7 @@ function Form() {
             })
         } else {
             setAccomplishmentData({
-                ...accomplishmmentData,
+                ...accomplishmentData,
                 [e.target.name]: e.target.value,
             })
         };
@@ -104,3 +104,4 @@ function Form() {
 
     )
 }
+export default Form;

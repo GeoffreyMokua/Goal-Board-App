@@ -19,14 +19,15 @@
       "name": "Own a Porsche Taycan Turbo",
       "progress": 10,
       "id": 6
+    },
+    {
+      "name": "finish moringa school by january",
+      "progess": "",
+      "progress": "35",
+      "id": 7
     }
   ],
   "accomplishments": [
-    {
-      "id": 1,
-      "name": "Sell First Company: Epiforce, Inc.",
-      "completed": "July 2016"
-    },
     {
       "id": 2,
       "name": "Sell Second Company: JM Media",
@@ -42,6 +43,21 @@
       "name": "New Accomplishment",
       "completed": "June 2013",
       "id": 5
+    },
+    {
+      "name": "buy a posh home in kilimani",
+      "completed": "may 2024",
+      "id": 6
+    },
+    {
+      "name": "",
+      "completed": "",
+      "id": 7
+    },
+    {
+      "name": "",
+      "completed": "",
+      "id": 8
     }
   ]
 }
