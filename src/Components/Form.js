@@ -34,7 +34,7 @@ function Form({onFormSubmit}) {
         else { type = "accomplishments" }
 
 
-        fetch(`http://localhost:3000/${type}`, {
+        fetch(`https://restifulserver.herokuapp.com/${type}`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",

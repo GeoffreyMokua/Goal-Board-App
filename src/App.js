@@ -14,13 +14,13 @@ function App() {
 
 
    useEffect(() => {
-    fetch(`http://localhost:3000/goals`)
+    fetch(`https://restifulserver.herokuapp.com/goals`)
       .then(res => res.json())
       .then(setGoals);
    }, []);
   
   useEffect(() => {
-    fetch(`http://localhost:3000/accomplishments`)
+    fetch(`https://restifulserver.herokuapp.com/accomplishments`)
       .then(res => res.json())
       .then(setAccomplishments);
   }, []);
@@ -42,7 +42,7 @@ function App() {
   }
 
   const onDeleteClick = (id, type) => {
-    fetch(`http://localhost:3000/${type}/${id}`, {
+    fetch(`https://restifulserver.herokuapp.com/${type}/${id}`, {
       method: 'DELETE'
     })
     

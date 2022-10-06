@@ -7,7 +7,7 @@ function GoalItem({ goal, onUpdateGoal, onDeleteClick }) {
      
     const handleChange = (e) => {
         setProgressBar(parseInt(e.target.value))
-        fetch(`http://localhost:3000/goals/${id}`, {
+        fetch(`https://restifulserver.herokuapp.com/goals${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
