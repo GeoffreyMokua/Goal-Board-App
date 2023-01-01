@@ -43,8 +43,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
- ### link to github pages
- 
+ ### link to the site
+ https://my-goal-board-app.netlify.app/
  ### Authors Info
  Slack Profile- Geoffrey Mokua
  Linkedin- Geoffrey Nyakundi
