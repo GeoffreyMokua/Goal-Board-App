@@ -34,7 +34,7 @@ function Form({onFormSubmit}) {
         else { type = "accomplishments" }
 
 
-        fetch(`https://json-static-server.netlify.app/${type}`, {
+        fetch(`https://restifulserver.herokuapp.com/${type}`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",

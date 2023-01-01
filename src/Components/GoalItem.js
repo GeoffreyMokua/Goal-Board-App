@@ -7,7 +7,7 @@ function GoalItem({ goal, onUpdateGoal, onDeleteClick }) {
      
     const handleChange = (e) => {
         setProgressBar(parseInt(e.target.value))
-        fetch(`https://json-static-server.netlify.app/goals.json${id}`, {
+        fetch(`https://restifulserver.herokuapp.com/goals${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
